@@ -6,12 +6,14 @@ This is not an Android Java program, but a bare command line tool. To execute
 it, you need access to a shell terminal. You may need to have root access to
 push it in /system/bin directory.
 
-# Original README
 ## INSTALL
 
 ndk-build
+
 adb shell mkdir /data/tmp
+
 adb shell chmod 755 /data/tmp
+
 adb push obj/local/armeabi/stress
 
 ## USAGE
