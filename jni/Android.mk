@@ -2,11 +2,7 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := stress
-LOCAL_SRC_FILES := src/stress.c
-LOCAL_C_INCLUDES := $(LOCAL_PATH)/src
+LOCAL_SRC_FILES := stress.c
 LOCAL_CFLAGS += -DPACKAGE=\"stress\" -DVERSION=\"1.0.4\"
-
-LOCAL_MODULE_PATH := $(TARGET_OUT_OPTIONAL_EXECUTABLES)
-LOCAL_MODULE_TAGS := debug
 
 include $(BUILD_EXECUTABLE)
