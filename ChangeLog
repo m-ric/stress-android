@@ -1,3 +1,10 @@
+2014-08-14  Parménides GV <parmegv@sdf.org>
+	* Refactor for Android
+
+	* Include me in the AUTHORS file
+
+	* NEWS: up to version 1.0.4
+
 2010-03-19  Amos Waterland  <apw@rossby.metr.ou.edu>
 
 	* configure.in, doc/version.texi: Up to version 1.0.4.
