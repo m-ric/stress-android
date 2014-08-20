@@ -9,10 +9,10 @@ push it in /system/bin directory.
 # Original README
 ## INSTALL
 
-See the INSTALL file for generic installation instructions.  The quick
-version is:
-
-  ./configure && make && sudo make install
+ndk-build
+adb shell mkdir /data/tmp
+adb shell chmod 755 /data/tmp
+adb push obj/local/armeabi/stress
 
 ## USAGE
 
