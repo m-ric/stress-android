@@ -6,6 +6,25 @@ This is not an Android Java program, but a bare command line tool. To execute
 it, you need access to a shell terminal. You may need to have root access to
 push it in /system/bin directory.
 
+## Build using NDK standalone toolchain
+
+```shell
+export ANDROID_SDK_HOME=**Your SDK home**
+export ANDROID_NDK_HOME=**Your NDK home**
+export ANDROID_STANDALONE_TOOLCHAIN_HOME=**Your installed standalone toolchain home**
+export SYSROOT=$ANDROID_STANDALONE_TOOLCHAIN_HOME/sysroot
+
+# User specific environment and startup programs
+PATH=${ANDROID_NDK_HOME}
+PATH=$PATH:${ANDROID_SDK_HOME}/tools:${ANDROID_SDK_HOME}/platform-tools
+PATH=$PATH:${ANDROID_STANDALONE_TOOLCHAIN_HOME}/bin:/usr/local/sbin:/usr/local/bin
+PATH=$PATH:/usr/sbin:/usr/bin:/sbin:/bin
+export PATH=$PATH
+
+cd jni
+aarch64-linux-android-gcc -fPIE -fPIC --sysroot=$SYSROOT -stress\" -DVERSION=\"1.0.4\" -lm stress.c -o stress
+```
+
 ## INSTALL
 
 ndk-build
