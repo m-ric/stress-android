@@ -16,6 +16,14 @@ adb shell chmod 755 /data/tmp
 
 adb push obj/local/armeabi/stress
 
+## BUILD WITH CMAKE
+1. Download your desired [Android NDK](https://developer.android.com/ndk/downloads)
+2. Change version and path related information in [cross_compile.bash](cross_compile.bash) and [CMakeLists.txt](CMakeLists.txt)
+```
+mkdir build && cd build
+./../cross_compile.bash
+```
+
 ## USAGE
 
 You can see the program's usage statement by invoking it with --help.  A
